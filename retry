@@ -59,7 +59,7 @@ retry()
     fi
   done
 
-  if [[ $return_code -ne 0 && $attempts -gt $max_tries ]]; then; then
+  if [[ $return_code -ne 0 && $attempts -gt $max_tries ]]; then
     if [ -n "$fail_script" ]; then
       __log_out "Retries exhausted, running fail script"
       eval $fail_script
